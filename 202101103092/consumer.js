@@ -1,0 +1,8 @@
+const sayHi =require('./mymodule') 
+const person=require('./personmodule')
+const os=require('os')
+sayHi('Mandar')
+console.log(person.name)
+console.log(os.userInfo())
+console.log(os.type())
+console.log(os.totalmem())
