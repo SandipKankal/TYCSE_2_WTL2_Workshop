@@ -1,0 +1,15 @@
+<hr>
+<p>book-detail works!</p>
+<div *ngFor="let book of Books">
+<h3>{{book.BookName}},{{book.BookAuthor}}</h3>
+</div>
+<div>
+
+    <select>
+        <option *ngFor="let book of Books">
+            {{book.BookName}}
+        </option>
+    </select>
+
+</div>
+<hr>
