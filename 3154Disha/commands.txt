@@ -1,0 +1,25 @@
+//npm init
+//npm install express
+//npm install mysql
+//npm install nodemon
+//npm install cors
+
+db.config->db->book.model.js->book.controller.js->book.routes->app.js
+
+http://localhost:8080/api/books
+http://localhost:8080/api/books/id_no - DELETE
+
+Angular steps:
+npm install -g @angular/cli 
+ng new firstApp
+ng serve - inside the folder
+localhost:4200
+in firstApp->src->app->app.component->select-all and delete all -> write your own wtv
+
+to create new component - ng generate component BookDetail
+
+React:
+npx create-react-app first
+
+
+to start: npm start

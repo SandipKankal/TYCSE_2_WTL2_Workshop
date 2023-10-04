@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="app.component.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>WELCOME</h1>
+    </div>
+    Name of project: <font [color]=mycolor>{{project_title}}</font>
+    <br>{{name}}: <input type="text" [(ngModel)]="name"><br>
+    <button [disabled]="status" (click)="showData()">Click Me</button><br><br>
+  </body>
+  book-detail component:
+  <app-book-detail>book detail</app-book-detail>
+  <app-add-book></app-add-book>
+  <app-del-book></app-del-book>
+  <hr>
+  <ul>
+    <li><a routerLink="/add-book">Add Book</a></li>
+    <li><a routerLink="/del-book">Delete Book</a></li>
+  </ul>
+  Components Loading ..
+  <router-outlet></router-outlet>
+  book-cost component:
+  <app-book-cost>book cost</app-book-cost>
+  <app-form-handling></app-form-handling>
+  <p>List of books</p>
+  <div>
+    <select>
+      <option *ngFor="let book of Books">
+        {{book.BookName}}
+      </option>
+    </select>
+  </div>
+  <div *ngFor="let book of Books">
+    <h3>{{book.BookName}}, {{book.BookAuthor}}</h3>
+  </div>
+
+</html>
