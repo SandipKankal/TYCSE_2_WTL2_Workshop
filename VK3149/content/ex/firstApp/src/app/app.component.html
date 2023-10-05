@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="welcome-container">
+    <h1>Welcome</h1>
+    Name of project :<font [color]=mycolor>{{pagetitle}}</font>
+    <button :[disabled]="status">Click Me</button>
+    <button :(click)=showData()>Click Me</button>
+    <input type="text" [(ngModel)]="name">{{name}}<br>
+    <app-book-detail>Book data</app-book-detail>
+    <app-for-handling></app-for-handling>
+    <app-add-book></app-add-book>
+    <app-del-book></app-del-book>
+    <hr>
+    <ul>
+      <li><a routerLink="/add-book">Add Book</a></li>
+      <li><a routerLink="/del-book"> Delete Book</a></li>
+    </ul>
+    Component Loading ..
+    <router-outlet></router-outlet>
+   
+
+  </div>
+</div>
+
+<div>
+  <select>
+    <option *ngFor="let book of Books">
+      {{book.BookName}}
+    </option>
+  </select>
+</div>
+<div *ngFor="let book of Books">
+  <h3>{{book.BookName}},{{book.BookAuthor}}</h3>
+</div>

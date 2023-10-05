@@ -1,0 +1,11 @@
+<h1>Template Driven Forms</h1>
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <p>
+        Enter name:
+        <input type="text" required #fname="ngModel" id="fname" name="fname" ngModel>
+        Enter email:
+        <input type="text" id="mail" name="mail" ngModel>
+        <span *ngIf="fname.invalid && fname.touched" style="color:yellow;">Please enter fname</span>
+        <button type="submit">submit</button>
+    </p>
+</form>
